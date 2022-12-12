@@ -204,8 +204,10 @@ function operatorInput(operator) {
         secondValue = output
         result = calculate(parseFloat(firstValue), parseFloat(secondValue), firstOperator)
         if (result > 10000) {
+          result = Math.round(result * 100) / 100;  
           output = shortResult(result, 1).toString();
         } else {
+          result = Math.round(result * 100) / 100;
           output = result;
         } 
         firstValue = output
@@ -215,8 +217,10 @@ function operatorInput(operator) {
         result = calculate(parseFloat(firstValue), parseFloat(secondValue), nextOperator)
         nextOperator = operator
         if (result > 10000) {
+          result = Math.round(result * 100) / 100;  
           output = shortResult(result, 1).toString();
         } else {
+          result = Math.round(result * 100) / 100;  
           output = result;
         }
         firstValue = output
@@ -237,8 +241,10 @@ function equals() {
             output = "Infinity"    
         } else { 
             if (result > 10000) {
+              result = Math.round(result * 100) / 100;  
               output = shortResult(result, 1).toString();
             } else {
+              result = Math.round(result * 100) / 100;  
               output = result;
             }
             firstValue = output
@@ -253,9 +259,11 @@ function equals() {
         if (result === "Infinity") {
           output = "Infinity";
         } else {
-          if (result > 10000) {
+            if (result > 10000) {
+            result = Math.round(result * 100) / 100;  
             output = shortResult(result, 1).toString();
-          } else {
+            } else {
+            result = Math.round(result * 100) / 100;    
             output = result;
           }
           firstValue = output;
