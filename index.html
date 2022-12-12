@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./Calculator.png">
+    <title>Your Online Calculator</title>
+</head>
+<body>
+    <section class="button-modes">
+        <button class="toggle dark">Dark Mode</button>
+        <button class="toggle-iphone">Iphone Mode</button>
+    </section>
+    <section class="calculator">
+        <div class="display">
+            <div class="secondary-display"></div>
+            <div class="primary-display"></div>     
+        </div>
+        <div class="top-btn">
+            <button class="button history">🕐</button>
+            <button class="btn backspace" data-key="Backspace">⌫</button>
+        </div> 
+        <div class="buttons">         
+            <button class="btn function clear" value="clear" data-key="Escape">C</button>
+            <button class="btn function ad" value="symbol" data-key="192">+/-</button>
+            <button class="btn function percent" value="percent" data-key="%">%</button>
+            <button class="btn operator division" data-key="/" value="/">/</button>
+            <button class="btn number" data-key="7" value="7">7</button>
+            <button class="btn number" data-key="8" value="8">8</button>
+            <button class="btn number" data-key="9" value="9">9</button>
+            <button class="btn operator multiply" data-key="*" value="*">x</button>
+            <button class="btn number" data-key="4" value="4">4</button>
+            <button class="btn number" data-key="5" value="5">5</button>
+            <button class="btn number" data-key="6" value="6">6</button>
+            <button class="btn operator subtr" data-key="-" value="-">-</button>
+            <button class="btn number" data-key="1" value="1">1</button>
+            <button class="btn number" data-key="2" value="2">2</button>
+            <button class="btn number" data-key="3" value="3">3</button>
+            <button class="btn operator add" data-key="+" value="+">+</button>
+            <button class="btn brackets" data-key="brackets">()</button>
+            <button class="btn number zero" data-key="0" value="0">0</button>
+            <button class="btn point" data-key="." value=".">.</button>
+            <button class="btn equal" data-key="Enter" value="=">=</button>
+        </div>
+    </section>
+    <section class="history-display">
+        <h2>History</h2>
+        <button class="delete-history">Clear History</button>
+    </section>
+   <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    transition: all 0.5s ease-in;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    background-color: rgb(218, 214, 214);
+}
+
+body.dark{
+    background-color: rgba(0, 0, 0, 0.889);
+}
+
+body.light{
+    background-color: rgba(174, 220, 227, 0.668);
+}
+
+body.iphone{
+    background-color: rgb(218, 214, 214);
+}
+
+.button-modes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    
+}
+
+.toggle, .toggle-iphone{
+    margin-right: 20px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.toggle:hover, .toggle-iphone:hover{
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.toggle.dark{
+    background-color: #383737;
+    color: rgb(227, 224, 224);
+}
+
+.toggle.light{
+    background-color: rgb(179, 186, 186);
+    color: #fff;
+}
+
+.toggle-iphone{
+    background-color: rgb(63, 62, 62);
+    color: #fff;
+}
+
+.toggle-iphone.active{
+    background-color: orange;
+}
+
+.calculator{
+    background-color: #22252d; 
+    height: 660px;
+    width: 370px;
+    margin-left: 35%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 10px 30px rgba(11, 11, 11, 0.473);
+}
+
+.calculator.dark{
+    background-color: rgb(13, 3, 3);
+}
+
+.calculator.light{
+    background-color: rgb(232, 229, 229);
+}
+
+.display{
+    padding: 1.5rem;
+    min-height: 200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    color: #fff;
+    text-align: right;
+    
+}
+
+.display.dark{
+    color: #aaa;
+}
+
+.display.light{
+    color: rgb(116, 114, 114);
+}
+
+.display .secondary-display{
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.display .primary-display{
+    font-size: 4rem;
+    font-weight: 700;
+    width: 100%;
+    overflow: auto;
+}
+
+.primary-display{
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.top-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+
+}
+
+.top-btn::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: orange;
+    display: block;
+    margin: 5px;
+    transition: 0.5s;
+}
+
+.top-btn.dark::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #5b1d2897;
+    display: block;
+    margin: 5px;
+    transition: 0.5s;
+}
+
+.top-btn.light::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: rgb(84, 190, 225);
+    display: block;
+    margin: 5px;
+    transition: 0.5s;
+}
+
+.button.history{
+    font-size: 22px;
+    color: #000;
+    background-color: #22252d;
+    border: none;
+    transform: translateX(-20px);
+    cursor: pointer;
+}
+
+.btn.backspace{
+    font-size: 22px;
+    color: orange;
+    background-color: #22252d;
+    border: none;
+    transform: translateX(20px);
+    cursor: pointer;
+}
+
+.btn.backspace.dark{
+    color: #880d24a8;
+    background-color: #000;
+}
+
+.button.history.dark{
+    background-color: #000;
+}
+
+.button.history.light{
+    background-color: rgb(232, 229, 229);
+}
+
+.btn.backspace.light{
+    color: rgb(138, 184, 203);
+    background-color: rgb(232, 229, 229);
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(5, 60px);
+    grid-gap: 20px;
+    margin: 12px 18px 16px;   
+}
+
+.btn:not(.button.history, .btn.backspace){
+   background-color: #333;
+   font-size: 26px;
+   height: 60px;
+   width: 60px;
+   border-radius: 50%;
+   border: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+}
+
+.btn.dark:not(.button.history, .btn.backspace){
+    background-color: #524040fe;
+    color: #000;
+    box-shadow: 5px 10px 30px rgba(11, 11, 11, 0.473);
+}
+
+.btn.light:not(.button.history, .btn.backspace){
+    background-color: rgb(123, 210, 239);
+    box-shadow: 5px 10px 20px rgba(176, 174, 174, 0.473);
+}
+
+.btn:not(.button.history, .btn.backspace):hover{
+    opacity: 0.7;
+}
+
+.btn:not(.button.history, .btn.backspace):active{
+    transform: scale(1.1);
+}
+
+.button.history:active, .btn.backspace:active{
+    opacity: 0.8;
+}
+
+.btn.function.clear, .btn.function.ad, .btn.function.percent{
+    background-color: #aaa;
+}
+
+.btn.function.clear.dark, .btn.function.ad.dark, .btn.function.percent.dark{
+    background-color: rgb(78, 81, 81);
+}
+
+.btn.function.clear.light, .btn.function.ad.light, .btn.function.percent.light{
+    background-color: rgb(196, 195, 195);
+    color: #fff;
+}
+
+.btn.operator.division, .btn.operator.multiply, .btn.operator.subtr, .btn.operator.add{
+    background-color: orange;
+}
+
+.btn.operator.division.light, .btn.operator.multiply.light, .btn.operator.subtr.light, .btn.operator.add.light{
+    background-color: rgb(230, 173, 231);
+    color: #fff;
+}
+
+.btn.operator.division.dark, .btn.operator.multiply.dark, .btn.operator.subtr.dark, .btn.operator.add.dark{
+    background-color: #5b1d2897;
+}
+
+.number, .zero, .point, .brackets{
+    color: #fff;
+}
+
+.equal{
+    color: orange;
+}
+
+.equal.dark{
+    color: #5b1d2897;
+}
+
+.equal.light{
+    color: rgb(230, 173, 231);
+    background-color: rgb(252, 235, 235);
+}
+
+.history-display.active{
+    background-color: #22252d; 
+    height: 660px;
+    width: 370px;
+    margin-left: 64.5%;
+    transform: translateY(-710px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: rgb(230, 228, 228);
+    padding: 15px;
+    border-radius: 1.5rem;
+    box-shadow: 5px 10px 30px rgba(11, 11, 11, 0.473);
+    margin-bottom: 200px;
+}
+
+.history-display h2::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: rgb(149, 111, 7);
+    display: block;
+    margin-top: 5px;
+    transition: 0.5s;
+}
+
+.history-display.dark h2::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: rgb(149, 31, 7);
+    display: block;
+    margin-top: 5px;
+    transition: 0.5s;
+}
+
+.history-display.light h2::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: rgb(7, 147, 149);
+    display: block;
+    margin-top: 5px;
+    transition: 0.5s;
+}
+
+.history-display.hide{
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.history-display.dark{
+    background-color: rgb(13, 3, 3)
+}
+
+.history-display.light{
+    background-color: rgb(181, 212, 215);
+}
+
+.delete-history{
+    padding: 7px;
+    border-radius: 10px;
+    border: none;
+    color: rgb(190, 9, 9);
+    cursor: pointer;
+    align-self: flex-end;
+    transform: translateY(-48px);
+}
+
+.delete-history:hover{
+    opacity: 0.8;
+    background-color: rgb(223, 219, 219);
+    color: red;
+}
+
+.history-display.light .delete-history{
+    color: rgb(5, 129, 129);
+}
